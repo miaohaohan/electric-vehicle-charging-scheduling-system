@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <div id="app">
+  <!--缓存页面-->
+    <keep-alive>
+      <a-config-provider :locale="locale">
+        <router-view v-if="$route.meta.keepAlive"/>
+      </a-config-provider>
+    </keep-alive>
+    <!--不缓存页面-->
+    <a-config-provider :locale="locale">
+      <router-view v-if="!$route.meta.keepAlive"/>
+    </a-config-provider>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
 export default {
   name: 'App',
+  data () {
+    return {
+      locale : zhCN
+    }
+  },
   components: {
-    HelloWorld
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

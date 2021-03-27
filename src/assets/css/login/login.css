@@ -1,0 +1,220 @@
+/* CSS Document */
+* {
+	box-sizing: border-box;
+	font-family: microsoft yahei,helvetia,pingfang sc,Arial,Tahoma;
+	}
+body {
+	margin: 0;
+	padding: 0;
+	font: 14px/150% microsoft yahei,helvetia,pingfang sc,Arial,Tahoma;
+	text-size-adjust: 100%;
+	background: #00baff;
+	color: #5f6c7e;
+	}
+a {
+	text-decoration: none;
+	color: #00a4ff;
+	transition: 0.2s
+	}
+a:hover {
+	color: #004aff;
+	}
+::-webkit-scrollbar {/*Chrome适用*/
+	width: 10px;
+	margin: 5px;
+	}
+::-webkit-scrollbar-thumb {/*滚动条*/
+	border-radius: 10px;
+	background: rgba(198,203,210,.8);
+	}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	border-radius: 10px;
+	background: rgba(198,203,210,.2);
+	opacity: 0.7;
+	}
+input,
+select,
+textarea {
+	border: none;
+	font-size: 14px;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+input::placeholder,
+textarea::placeholder {
+	font-size: 14px;
+	color: #c6cbd2;
+	}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	font-size: 14px;
+	color: #c6cbd2;
+	}
+input[type="button"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	}
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 0 5px
+	}
+textarea {
+	overflow: auto;
+	word-break: break-all
+	}
+fieldset {
+	border: 1px solid #dce1e6;
+	border-radius: 6px;
+	margin: 10px 0 20px 0;
+	}
+legend {
+	font-weight: bold;
+	padding: 10px 0;
+	color: #5f6c7e
+	}
+p {
+	text-indent: 2em
+	}
+img {
+	border: none
+	}
+.login_title{
+	font: 20px/150% microsoft yahei,helvetia,pingfang sc,Arial,Tahoma;
+	color: #387eff;
+	margin: 20px;
+}
+.ulhide,
+.ulhide ul,
+.ulhide li {
+	margin: 0;
+	padding: 0;
+	list-style: none
+	}
+.tright {
+	text-align: right
+	}
+.tleft {
+	text-align: left
+	}
+.clear {
+	clear: both
+	}
+.Contents {
+	padding: 10px;
+	}
+.Gradient {
+	background: linear-gradient(-180deg,#79b2ff 10%,#69acff 100%);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	}
+
+.WhiteAlpha {
+	width: 100%;
+	height: 454px;
+	position: absolute;
+	top: 50%;
+	margin: -227px 0 0 ;
+	}
+.Main {
+	width: 1080px;
+	height: 454px;
+	background: url(../../images/login/login_img.png) no-repeat;
+	margin: 0 auto;
+	position:relative;
+	}
+.Main .logo{
+	width: 374px;
+	height: 64px;
+	position: absolute;
+	top: -124px;
+	left: -60px;
+}
+.Title1 { /*模块标题*/
+	padding: 5px 0;
+	font: bold 14px/32px microsoft yahei,helvetia,pingfang sc,Arial,Tahoma;
+	color: #232c45;
+	float: left;
+	width: 100%;
+	}
+.Line:before {
+	border-radius: 0 5px 5px 0;
+	width: 5px;
+	height: 22px;
+	margin: 5px 10px 5px 0;
+	content: "";
+	float: left;
+	background: #00a4ff
+	}
+.Font18 {
+	font-size: 18px !important
+	}
+.FormArea {
+	width: 360px;
+	height: 360px;
+	margin-top: 22px;
+	border-radius: 8px;
+	float: right;
+	text-align: center;
+	box-shadow: 0px 0px 20px rgba(11,166,192,.2);
+	background: #FFF;
+	}
+.FormArea li {
+	width: 290px;
+	position: relative;
+	margin: 0 auto;
+	text-align: left;
+	}
+.FormHead {
+	padding: 50px 0 50px 0;
+	color: #232c45
+	}
+.Input {
+	width: 100%;
+	height: 36px;
+	border: none;
+	background: transparent;
+	border-bottom: 1px solid #c6cbd2;
+	padding: 0 10px 0 40px;
+	}
+.Input:hover {
+	border-color: #00a4ff
+	}
+/*.user {*/
+/*	background: url(../images/ico_user.png) no-repeat left center*/
+/*	}*/
+/*.psw {*/
+/*	background: url(../images/ico_psw.png) no-repeat left center*/
+/*	}*/
+/*.code {*/
+/*	background: url(../images/ico_check.png) no-repeat left center*/
+/*	}*/
+.vcode { /*验证码*/
+	width: 95px;
+	height: 25px;
+	position: absolute;
+	right: 5px;
+	top: 0;
+	}
+.tips{
+	font: 14px/150% microsoft yahei,helvetia,pingfang sc,Arial,Tahoma;
+	color: #fe0003;
+}
+.BtnSubmit {
+	background: rgb(56, 126, 255);
+	box-shadow: 1px 4px 12px rgba(0,164,255,.4);
+	color: #FFF;
+	border: none;
+	width: 290px;
+	border-radius: 4px;
+	padding: 0;
+	opacity: 0.8
+	}
+.BtnSubmit:hover {
+	opacity: 1
+	}
+.BtnSubmit:disabled {
+	background: #c6cbd2;
+	box-shadow: none;
+	color: #959da9
+	}

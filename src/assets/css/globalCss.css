@@ -1,0 +1,26 @@
+.myTags :global(.ant-tabs-bar) {
+    margin: 0px !important;
+}
+
+.myTags :global(.ant-tabs-tab-active){
+    background: #1890ff !important;
+    color: #fff !important;
+}
+.myTags :global(.ant-tabs-tab) {
+    line-height: 28px !important;
+}
+.myTags :global(.ant-tabs-card-bar) {
+    height: 35px;
+}.myTags :global(.ant-tabs-tab) {
+    border-radius: 0px 0px 0px 0px !important;
+    border-bottom:1px solid #e8e8e8 !important
+}
+.add-security :global(.ant-modal-content .ant-modal-header) {
+    background: #1975CA !important;
+}
+.add-security :global(.ant-modal-title) {
+    color: #FFFFFF !important;
+}
+.add-security :global(.ant-modal-close) {
+    color: #FFFFFF !important;
+}
