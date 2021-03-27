@@ -6,7 +6,7 @@
     v-model="$store.getters.collapsed"
     class="dk_sider"
     :class="{ pcSider: !collapsed }"
-    width="140"
+    width="160"
     collapsedWidth="55"
   >
     <div class="dk_header_logo">
@@ -14,7 +14,7 @@
       <!--<img src="@/assets/images/main/Expand_logo.png" >-->
       <div style="display: inline-block;">
         <img src="@/assets/images/main/logo.png" style="float: left;">
-        <span style="font-size: 14px;line-height:28px;float: left;margin-left: 8px;" v-if="showTip">物联网标签体系</span>
+        <span style="font-size: 14px;line-height:28px;float: left;margin-left: 8px;" v-if="showTip">充电行为模拟</span>
       </div>
     </div>
     <a-menu
@@ -31,6 +31,7 @@
           :key="menu.key"
           v-if="isNull(menu.children)"
           @click="changeMenu(menu)"
+          :title="menu.menuName"
         >
           <router-link :to="menu.path">
             <a-icon :type="menu.icon" />
@@ -45,6 +46,7 @@
           <span
             slot="title"
             @click="changeMenu(menu)"
+            :title="menu.menuName"
           >
             <a-icon :type="menu.icon" />
             <span>{{ menu.menuName }}</span>
@@ -55,8 +57,9 @@
               :key="childItem.key"
               v-if="isNull(childItem.children)"
               @click="changeMenu(menu,childItem.key)"
-            >
-              <router-link :to="menu.path">
+              :title="childItem.menuName"
+            > 
+              <router-link :to="childItem.path">
                 {{childItem.menuName}}
               </router-link>
             </a-menu-item>
@@ -68,6 +71,7 @@
               <span
                 slot="title"
                 @click="changeMenu(menu,childItem.key)"
+                :title="childItem.menuName"
               >
                 <span>{{ childItem.menuName }}</span>
               </span>
@@ -76,8 +80,9 @@
                   v-if="child2Item.key"
                   :key="child2Item.key"
                   @click="changeMenu(menu,childItem.key,child2Item.key)"
+                  :title="child2Item.menuName"
                 >
-                  <router-link :to="menu.path">
+                  <router-link :to="child2Item.path">
                     {{child2Item.menuName}}
                   </router-link>
                 </a-menu-item>

@@ -24,14 +24,16 @@
             :key="menu.key"
             v-if="!menu.isHasChild"
             @click="changeMenu(menu)"
+            :title="menu.menuName"
           >
-            <router-link to="/home">
+            <router-link :to="menu.path">
               <a-icon :type="menu.icon" />
               <span>{{ menu.menuName }}</span>
             </router-link>
           </a-menu-item>
+          
           <a-sub-menu :key="menu.key" v-else>
-            <span slot="title">
+            <span slot="title" :title="menu.menuName">
               <a-icon :type="menu.icon" />
               <span>{{ menu.menuName }}</span>
             </span>
@@ -40,8 +42,9 @@
               <a-menu-item
                 :key="childItem.key"
                 @click="changeMenu(childItem)"
+                :title="childItem.menuName"
               >
-                <router-link to="/home">{{
+                <router-link :to="childItem.path">{{
                   childItem.menuName
                   }}</router-link>
               </a-menu-item>

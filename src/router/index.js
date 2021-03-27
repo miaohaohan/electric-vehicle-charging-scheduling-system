@@ -33,23 +33,41 @@ export default new Router ({
             name: '500',
             component: () => import('@/views/exceptions/500')
         },
-        // 充电桩配置
+        // 充电桩信息管理
         {
-          path: '/chargingPileConfig',
-          name: 'chargingPileConfig',
-          component: () => import('@/views/chargingPileConfig/ChargingPileConfig')
+          path: '/chargingPileInformationConfig',
+          name: 'chargingPileInformationConfig',
+          component: () => import('@/views/chargingPileConfig/ChargingPileInformationConfig')
         },
-        // 充电汽车配置
+        // 充电桩设置管理
         {
-          path: '/chargingCarConfig',
-          name: 'chargingCarConfig',
-          component: () => import('@/views/chargingCarConfig/ChargingCarConfig')
+          path: '/chargingPileSetUpConfig',
+          name: 'chargingPileSetUpConfig',
+          component: () => import('@/views/chargingPileConfig/ChargingPileSetUpConfig')
+        },
+        // 充电汽车信息管理
+        {
+          path: '/chargingCarInformationConfig',
+          name: 'chargingCarInformationConfig',
+          component: () => import('@/views/chargingCarConfig/ChargingCarInformationConfig')
+        },
+        // 充电汽车设置管理
+        {
+          path: '/chargingCarSetUpConfig',
+          name: 'chargingCarSetUpConfig',
+          component: () => import('@/views/chargingCarConfig/ChargingCarSetUpConfig')
         },
         // 充电汽车行驶地图配置
         {
           path: '/mapConfig',
           name: 'mapConfig',
           component: () => import('@/views/mapConfig/MapConfig')
+        },
+        // 充电汽车模拟调度
+        {
+          path: '/chargingCarDispatch',
+          name: 'chargingCarDispatch',
+          component: () => import('@/views/chargingCarDispatch/ChargingCarDispatch')
         },
         // 充电汽车调度分析
         {
